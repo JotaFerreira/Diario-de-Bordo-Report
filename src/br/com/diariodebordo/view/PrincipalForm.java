@@ -32,6 +32,7 @@ import br.com.diariodebordo.model.vo.Ocorrencia;
 import br.com.diariodebordo.model.vo.Setor;
 import br.com.diariodebordo.model.vo.Supervisor;
 import br.com.diariodebordo.model.vo.Tecnico;
+import diario.de.bordo.relatorio.Versao;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -1155,7 +1156,6 @@ public class PrincipalForm extends javax.swing.JFrame {
         public void paintComponent(Graphics g) {
 
             g.setColor(new Color(0, 0, 0, 140));
-
             g.fillRect(0, 0, getWidth(), getHeight());
 
         }
@@ -1201,7 +1201,8 @@ public class PrincipalForm extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
 
-        this.setTitle("Diário de Bordo - Report");
+        Versao vInfo = new Versao();
+        this.setTitle("Diário de Bordo Report - Build: " +  vInfo.getVersion());
 
         try {
 

@@ -47,6 +47,12 @@
 
     </target>
     
+        <target name="-pre-jar" > 
+        <propertyfile file="src/version.properties"> 
+        <entry key="BUILD" value="1" type="int" operation="+"/> 
+        </propertyfile> 
+        </target> 
+    
     <!--
 
     There exist several targets which are by default empty and which can be 
